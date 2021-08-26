@@ -1,18 +1,23 @@
 # @camilotdex/logger
 
 Beautiful logs without making a mess.
+Organize your logs by class names, hide the logs you won't need and send the important data to specific log files.
+
+- [x] Beautiful logs with timestamp and classes
+- [x] Pipe logs to files based on classes
 
 ```js
-const Logger = require('@camilotdex/logger');
+const Logger = require('@mysticaldragon/logger');
 const { log } = new Logger();
 
 log("MAIN", "Hello world!");	
-// [Wed, 25 Aug 2021 20:35:35 GMT] | MAIN | Hello World!
 ```
+![Hello World!](https://i.ibb.co/0mxskz9/Sin-t-tulo.png)
+
 Show, hide and pipe logs to files based on filters
 
 ```js
-const Log = require('@camilotdex/logger');
+const Log = require('@mysticaldragon/logger');
 const { log } = new Logger({
 	enabled: boolean, // Is logging activated? (Default, true)
 	hidden: [{ class: "HIDDEN_LOG" }] // Hide logs based on class, Wildcard: * (Default, [])
