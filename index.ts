@@ -91,6 +91,7 @@ export class Logger {
 
     async bm<T> (promise: Promise<T>, name: string) {
         const now = Date.now();
+        
         if (name) this.log("LOGGER", "Benchmarking", highlight(name));
         
         const result = await promise;
