@@ -1,4 +1,4 @@
-# @camilotdex/logger
+# @mysticaldragon/logger
 
 Beautiful logs without making a mess.
 Organize your logs by class names, hide the logs you won't need and send the important data to specific log files.
