@@ -1,9 +1,9 @@
 import { cold, customLog, highlight, sequencialColor, timestamp } from "termx";
-import { bold } from "chalk";
 import { ObjectUtils } from "./utils/object";
 import { StringUtils } from "./utils/string";
 import { inspect } from "util";
 import { createWriteStream } from "fs";
+import { bold } from "chalk";
 
 export interface LogDescriptor {
     class?: string;
@@ -107,3 +107,4 @@ export class Logger {
 const defaultLogger = new Logger();
 
 export const log = defaultLogger.log.bind(defaultLogger);
+export { cold, highlight, danger, warning } from "termx";
