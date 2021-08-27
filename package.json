@@ -1,6 +1,6 @@
 {
   "name": "@mysticaldragon/logger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Manage beautiful logs without making a mess",
   "repository": {
     "type": "git",
