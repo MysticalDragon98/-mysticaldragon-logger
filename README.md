@@ -17,7 +17,7 @@ log("MAIN", "Hello world!");
 Show, hide and pipe logs to files based on filters
 
 ```js
-const Log = require('@mysticaldragon/logger');
+const Logger = require('@mysticaldragon/logger');
 const { log } = new Logger({
 	enabled: boolean, // Is logging activated? (Default, true)
 	hidden: [{ class: "HIDDEN_LOG" }] // Hide logs based on class, Wildcard: * (Default, [])
