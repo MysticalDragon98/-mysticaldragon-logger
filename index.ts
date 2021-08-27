@@ -104,7 +104,9 @@ export class Logger {
 
 }
 
-const defaultLogger = new Logger();
+let defaultLogger = new Logger();
 
-export const log = defaultLogger.log.bind(defaultLogger);
+export const log = (className: string, ...args: any[]) => defaultLogger.log.apply(defaultLogger, [className, ...args]);
+export const configureLogs = (options: LoggerOptions) => defaultLogger = new Logger(options);
+
 export { cold, highlight, danger, warning } from "termx";

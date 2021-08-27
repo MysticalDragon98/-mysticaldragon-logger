@@ -35,8 +35,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __spreadArray = (this && this.__spreadArray) || function (to, from) {
+    for (var i = 0, il = from.length, j = to.length; i < il; i++, j++)
+        to[j] = from[i];
+    return to;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.warning = exports.danger = exports.highlight = exports.cold = exports.log = exports.Logger = exports.verboseLog = void 0;
+exports.warning = exports.danger = exports.highlight = exports.cold = exports.configureLogs = exports.log = exports.Logger = exports.verboseLog = void 0;
 var termx_1 = require("termx");
 var object_1 = require("./utils/object");
 var string_1 = require("./utils/string");
@@ -134,7 +139,16 @@ var Logger = /** @class */ (function () {
 }());
 exports.Logger = Logger;
 var defaultLogger = new Logger();
-exports.log = defaultLogger.log.bind(defaultLogger);
+var log = function (className) {
+    var args = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        args[_i - 1] = arguments[_i];
+    }
+    return defaultLogger.log.apply(defaultLogger, __spreadArray([className], args));
+};
+exports.log = log;
+var configureLogs = function (options) { return defaultLogger = new Logger(options); };
+exports.configureLogs = configureLogs;
 var termx_2 = require("termx");
 Object.defineProperty(exports, "cold", { enumerable: true, get: function () { return termx_2.cold; } });
 Object.defineProperty(exports, "highlight", { enumerable: true, get: function () { return termx_2.highlight; } });

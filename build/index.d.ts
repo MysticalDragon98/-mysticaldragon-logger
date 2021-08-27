@@ -20,5 +20,6 @@ export declare class Logger {
     matchesAll(log: LogDescriptor, filter: LogDescriptor[]): boolean;
     bm<T>(promise: Promise<T>, name: string): Promise<T>;
 }
-export declare const log: (_class: any, ...data: any) => void;
+export declare const log: (className: string, ...args: any[]) => void;
+export declare const configureLogs: (options: LoggerOptions) => Logger;
 export { cold, highlight, danger, warning } from "termx";
