@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Logger = exports.verboseLog = void 0;
+exports.log = exports.Logger = exports.verboseLog = void 0;
 var termx_1 = require("termx");
 var chalk_1 = require("chalk");
 var object_1 = require("./utils/object");
@@ -133,4 +133,6 @@ var Logger = /** @class */ (function () {
     return Logger;
 }());
 exports.Logger = Logger;
+var defaultLogger = new Logger();
+exports.log = defaultLogger.log.bind(defaultLogger);
 //# sourceMappingURL=index.js.map
