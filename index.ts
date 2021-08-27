@@ -1,4 +1,4 @@
-import { cold, customLog, highlight, log, sequencialColor, timestamp } from "termx";
+import { cold, customLog, highlight, sequencialColor, timestamp } from "termx";
 import { bold } from "chalk";
 import { ObjectUtils } from "./utils/object";
 import { StringUtils } from "./utils/string";
@@ -103,3 +103,7 @@ export class Logger {
     }
 
 }
+
+const defaultLogger = new Logger();
+
+export const log = defaultLogger.log.bind(defaultLogger);
