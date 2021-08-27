@@ -7,8 +7,7 @@ Organize your logs by class names, hide the logs you won't need and send the imp
 - [x] Pipe logs to files based on classes
 
 ```js
-const Logger = require('@mysticaldragon/logger');
-const { log } = new Logger();
+const { log } = require('@mysticaldragon/logger');
 
 log("MAIN", "Hello world!");	
 ```
