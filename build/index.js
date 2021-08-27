@@ -36,13 +36,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.log = exports.Logger = exports.verboseLog = void 0;
+exports.warning = exports.danger = exports.highlight = exports.cold = exports.log = exports.Logger = exports.verboseLog = void 0;
 var termx_1 = require("termx");
-var chalk_1 = require("chalk");
 var object_1 = require("./utils/object");
 var string_1 = require("./utils/string");
 var util_1 = require("util");
 var fs_1 = require("fs");
+var chalk_1 = require("chalk");
 function verboseLog(name) {
     return termx_1.customLog(termx_1.sequencialColor(), chalk_1.bold(name));
 }
@@ -135,4 +135,9 @@ var Logger = /** @class */ (function () {
 exports.Logger = Logger;
 var defaultLogger = new Logger();
 exports.log = defaultLogger.log.bind(defaultLogger);
+var termx_2 = require("termx");
+Object.defineProperty(exports, "cold", { enumerable: true, get: function () { return termx_2.cold; } });
+Object.defineProperty(exports, "highlight", { enumerable: true, get: function () { return termx_2.highlight; } });
+Object.defineProperty(exports, "danger", { enumerable: true, get: function () { return termx_2.danger; } });
+Object.defineProperty(exports, "warning", { enumerable: true, get: function () { return termx_2.warning; } });
 //# sourceMappingURL=index.js.map

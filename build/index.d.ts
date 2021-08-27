@@ -21,3 +21,4 @@ export declare class Logger {
     bm<T>(promise: Promise<T>, name: string): Promise<T>;
 }
 export declare const log: (_class: any, ...data: any) => void;
+export { cold, highlight, danger, warning } from "termx";
